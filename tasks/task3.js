@@ -12,15 +12,15 @@ function addSuccessPercent(olympicRepresentation) {
   return olympicRepresentation.map(item => {
     let percentOfSuccess;
 
-    // Перевірка, чи медалі та спортсмени дорівнюють нулю
+    
     if (item.athletes === 0 && item.medals === 0) {
       percentOfSuccess = '0%';
     } else {
-      // Обчислюємо відсоток успіху та округлюємо до десятих
+      
       percentOfSuccess = ((item.medals / item.athletes) * 100).toFixed(1) + '%';
     }
 
-    // Повертаємо новий об'єкт із доданим полем percentOfSuccess
+    
     return {
       ...item,
       percentOfSuccess
